@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+    <!-- Title -->
     <title>Options</title>
+
+    <!-- login Google API -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script>
+      function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail());
+      }
+    </script>
   </head>
+
   <body>
-    <form>
-      <label>
-        Enter your name:
-        <input type="text" id="name" name="name">
-      </label>
-      <br>
-      <button type="submit">Save</button>
-    </form>
+
+    <!-- login section -->
+    <section class = "login">
+      <div class="g-signin2" data-onsuccess="onSignIn">
+
+        <label>
+          Enter your name:
+          <input type="text" id="name" name="name">
+        </label>
+        
+        <button type="submit">Save</button>
+
+    <!-- something for login -->
+      </div>
+    </section>
+    
   </body>
 </html>
 

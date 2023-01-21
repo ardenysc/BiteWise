@@ -1,20 +1,39 @@
 {
-    "name": "BIteWise",
+    "manifest_version": 2,
+    "name": "Toy Extension",
     "version": "1.0",
-    "description": "nwHack",
+    "description": "A prep for nwHack Hackathion",
     "icons": {
         "128": "icon128.png",
         "48": "icon48.png",
         "16": "icon16.png"
     },
-    "action": {
-      "default_popup": "popup.html"
+    "browser_action":{
+        "default_icon": "icon16.png",
+        "default_popup": "popup.html",
+        "options_page": "options_page.html"
     },
-    "options_page": "options_page.html",
-    
     "permissions": [
-    "tabs",
-    "bookmarks",
-    "storage"],
-    "manifest_version": 3
-  }
+        "storage"
+    ] 
+}
+// {
+//     "name": "BIteWise",
+//     "version": "1.0",
+//     "description": "nwHack",
+//     "icons": {
+//         "128": "icon128.png",
+//         "48": "icon48.png",
+//         "16": "icon16.png"
+//     },
+//     "action": {
+//       "default_popup": "popup.html"
+//     },
+//     "options_page": "options_page.html",
+    
+//     "permissions": [
+//     "tabs",
+//     "bookmarks",
+//     "storage"],
+//     "manifest_version": 3
+//   }
