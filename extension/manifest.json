@@ -1,0 +1,57 @@
+{
+<<<<<<< HEAD:manifest.json
+    "manifest_version": 2,
+    "name": "Toy Extension",
+=======
+    "manifest_version": 3,
+    "name": "BiteWise",
+>>>>>>> refs/remotes/origin/main:extension/manifest.json
+    "version": "1.0",
+    "description": "A prep for nwHack Hackathion",
+    "icons": {
+        "128": "icon128.png",
+        "48": "icon48.png",
+        "16": "icon16.png"
+    },
+    "browser_action":{
+        "default_icon": "icon16.png",
+        "default_popup": "popup.html",
+        "options_page": "options_page.html"
+    },
+<<<<<<< HEAD:manifest.json
+    "permissions": [
+        "storage"
+    ] 
+}
+// {
+//     "name": "BIteWise",
+//     "version": "1.0",
+//     "description": "nwHack",
+//     "icons": {
+//         "128": "icon128.png",
+//         "48": "icon48.png",
+//         "16": "icon16.png"
+//     },
+//     "action": {
+//       "default_popup": "popup.html"
+//     },
+//     "options_page": "options_page.html",
+    
+//     "permissions": [
+//     "tabs",
+//     "bookmarks",
+//     "storage"],
+//     "manifest_version": 3
+//   }
+=======
+    "options_page": "options_page.html",
+    "background": {
+      "service_worker": "eventPage.js"
+    },
+    "permissions": [
+    "tabs",
+    "bookmarks",
+    "storage",
+    "contextMenus"]   
+  }
+>>>>>>> refs/remotes/origin/main:extension/manifest.json
