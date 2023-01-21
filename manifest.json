@@ -10,10 +10,11 @@
     "action": {
       "default_popup": "popup.html"
     },
-      "permissions": [
-      "tabs",
-      "bookmarks",
-      "storage"
-    ],
+    "options_page": "options_page.html",
+    
+    "permissions": [
+    "tabs",
+    "bookmarks",
+    "storage"],
     "manifest_version": 3
   }
