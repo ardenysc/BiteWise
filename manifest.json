@@ -8,13 +8,13 @@
         "16": "icon16.png"
     },
     "action": {
-      "default_popup": "popup.html",
-      "options_page": "options_page.html"
+      "default_popup": "popup.html"
     },
-      "permissions": [
-      "tabs",
-      "bookmarks",
-      "storage"
-    ],
+    "options_page": "options_page.html",
+    
+    "permissions": [
+    "tabs",
+    "bookmarks",
+    "storage"],
     "manifest_version": 3
   }
