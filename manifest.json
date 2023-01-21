@@ -1,5 +1,6 @@
 {
-    "name": "BIteWise",
+    "manifest_version": 3,
+    "name": "BiteWise",
     "version": "1.0",
     "description": "nwHack",
     "icons": {
@@ -11,10 +12,12 @@
       "default_popup": "popup.html"
     },
     "options_page": "options_page.html",
-    
+    "background": {
+      "service_worker": "eventPage.js"
+    },
     "permissions": [
     "tabs",
     "bookmarks",
-    "storage"],
-    "manifest_version": 3
+    "storage",
+    "contextMenus"]   
   }
