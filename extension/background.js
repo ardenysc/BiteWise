@@ -4,32 +4,37 @@ let contextMenuItem= {
     "contexts": ["selection"]
 }
 
-function handleContextClick(info) {
-    var barcode = info.selectionText;
-    fetch('https://world.openfoodfacts.org/api/v0/product/' + barcode)
-    .then(response => response.json())
-    .then(data => {
-        createProductPopup(data) 
-    })
-    .catch(error => {
-        console.error(error);
-    });
-}
+async function getCurrentTab() {
+    let queryOptions = { active: true, lastFocusedWindow: true };
+    // `tab` will either be a `tabs.Tab` instance or `undefined`.
+    let [tab] = await chrome.tabs.query(queryOptions);
+    return tab;
+  }
 
-function createProductPopup(data) {
-    var popup = document.createElement('div');
-        popup.style.position = 'absolute';
-        popup.style.left = info.clientX + 'px';
-        popup.style.top = info.clientY + 'px';
-        popup.style.padding = '10px';
-        popup.style.background = 'white';
-        popup.style.border = '1px solid gray';
-        popup.innerHTML = '<b>Barcode:</b> ' + data;
-        //popup.innerHTML = '<b>Barcode:</b> ' + barcode + '<br><b>Product Name:</b> ' + data.productName + '<br><b>Brand:</b> ' + data.brand + '<br><b>Price:</b> ' + data.price;
-        document.body.appendChild(popup);
-        setTimeout(function() {
-            popup.remove();
-        }, 3000);
+async function handleContextClick(info) {
+    let currentTab = getCurrentTab();
+    chrome.tabs.sendMessage(currentTab.id,{
+        data: "hi"
+    });
+    //await chrome.runtime.sendMessage("asdasd")
+    // var barcode = info.selectionText;
+    // let currentTab = getCurrentTab();
+    // chrome.tabs.sendMessage(currentTab.id, {
+    //     clientX: info.clientX,
+    //     clientY: info.clientY,
+    //     data: barcode
+    //     });
+
+        // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        //     chrome.tabs.sendMessage(tabs[0].id, {
+        //         clientX: info.clientX,
+        //         clientY: info.clientY,
+        //         //barcode: data.barcode,
+        //         // productName: data.productName,
+        //         // brand: data.brand,
+        //         // price: data.price
+        //     }, function(response) {});
+        // })
 }
 
 chrome.contextMenus.create(contextMenuItem);
