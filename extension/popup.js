@@ -1,85 +1,40 @@
-// Set initial total to 0
+var scores = ["E", 1];
 
-var total = 0; // dont need
+let items = document.getElementsByClassName("col");
 
-var input = document.getElementById("name");
-var greet = document.getElementById("greet");
-
-var totalSpent = document.getElementById("total");
-
-var limitField = document.getElementById("limit"); // we don't need limit here
-var setLimitButton = document.getElementById("setLimit");
-
-var amountField = document.getElementById("amount");
-var amountSubmit = document.getElementById("amountSubmit");
-var amountResetBtn = document.getElementById("amountReset");
-
-const handleInput = (event) =>{
-    console.log(event);
-    greet.textContent = "Hello " + event.target.value + "!";
+if (scores[0]=="A") {
+    items[0].style.setProperty("background-color", "#00803d");
+    items[0].innerText = "A";
+} else if (scores[0]=="B") {
+    items[0].style.setProperty("background-color", "#87bd25");
+    items[0].innerText = "B";
+} else if (scores[0]=="C") {
+    items[0].style.setProperty("background-color", "#ffcc02");
+    items[0].innerText = "C";
+} else if (scores[0]=="D") {
+    items[0].style.setProperty("background-color", "#ef7d00");
+    items[0].innerText = "D";
+} else if (scores[0]=="E") {
+    items[0].style.setProperty("background-color", "#e73212");
+    items[0].innerText = "E";
 }
 
-const handleSubmit = (e) =>{
-     // Get the value of the input field
-     var amount = parseFloat(amountField.value);
 
-    // Check if the input is a valid number
-    if (!isNaN(amount)) {
-        // Add the input value to the total
-        total += amount;
-
-        // Update the total spent element
-        totalSpent.innerHTML = total;
-
-        // Check if total spent is greater than or equal to the limit
-        var limit = parseFloat(limitField.innerHTML);
-        if (total >= limit) {
-            // Show an alert
-            alert("Total spent has reached the limit. Please set a new limit.");
-        }
-        // Save the new total in chrome storage
-        chrome.storage.sync.set({'total': total});
-    } else {
-        // Display an error message
-        alert("Invalid input. Please enter a number.");
-    }
-}
-const setLimit = (e) => {
-     // Get the value of the limit input field
-     var newLimit = parseFloat(document.getElementById("newLimit").value);
-
-     // Check if the input is a valid number
-     if (!isNaN(newLimit)) {
-         // Update the limit element
-         limitField.innerHTML = newLimit;
-         // Save the new limit in chrome storage
-         chrome.storage.sync.set({'limit': newLimit});
-     } else {
-         // Display an error message
-         alert("Invalid input. Please enter a number.");
-     
-     }
-}
-const getStorageValues = (result) => {
-    if(result.total){
-        total = result.total;
-        totalSpent.innerHTML = total;
-    }
-    if(result.limit){
-        limitField.innerHTML = result.limit;
-    }
-}
-const resetAmount = (e) => {
-    total = 0
-    totalSpent.innerHTML = total;
-    chrome.storage.sync.set({'total': total});
+if (scores[1]==1) {
+    items[1].style.setProperty("background-color", "#00803d");
+    items[1].innerText = "1";
+} else if (scores[1]==2) {
+    items[1].style.setProperty("background-color", "#87bd25");
+    items[1].innerText = "2";
+} else if (scores[1]==3) {
+    items[1].style.setProperty("background-color", "#ef7d00");
+    items[1].innerText = "3";
+} else if (scores[1]==4) {
+    items[1].style.setProperty("background-color", "#e73212");
+    items[1].innerText = "4";
 }
 
-chrome.storage.sync.get(['total', 'limit'], getStorageValues);
-input.addEventListener("input", handleInput);
-amountSubmit.addEventListener("click", handleSubmit);
-setLimitButton.addEventListener("click", setLimit);
-amountResetBtn.addEventListener("click", resetAmount);
 
-
-
+var productName = "Product"
+let name = document.getElementById("product");
+name.innerText = productName;

@@ -1,7 +1,10 @@
 .popup {
     width: 300px;
     border-radius: 17px;
-    padding:20px;
+    padding-right:30px;
+    padding-left:30px;
+    padding-top:20px;
+    padding-bottom:20px;
 }
 
 .col {
@@ -12,10 +15,9 @@
     border-radius: 17px;
     vertical-align: middle;
     line-height: 50px;
+    background-color: #000;
 }
 
-.border {
-    border-radius: 17px;
-    border-width: thick;
-    border-style: solid;
+.bg-success {
+    background-color: #000;
 }
