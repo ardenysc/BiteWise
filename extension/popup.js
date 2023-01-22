@@ -1,4 +1,5 @@
 // Set initial total to 0
+
 var total = 0;
 
 var input = document.getElementById("name");
@@ -13,12 +14,11 @@ var amountField = document.getElementById("amount");
 var amountSubmit = document.getElementById("amountSubmit");
 var amountResetBtn = document.getElementById("amountReset");
 
-
-
 const handleInput = (event) =>{
     console.log(event);
     greet.textContent = "Hello " + event.target.value + "!";
 }
+
 const handleSubmit = (e) =>{
      // Get the value of the input field
      var amount = parseFloat(amountField.value);

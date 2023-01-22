@@ -3,7 +3,12 @@
     <head>
         <title>BiteWise</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        
+
+        <style>
+            h1 {text-align: center;}
+            h2 {text-align: center;}
+            h3 {text-align: center;}
+        </style>
 
     </head>
     <body>
@@ -24,22 +29,6 @@
         <h2 id="greet">Hello WORLD!!!!</h2>
         <input type="text" id="name">
         <script src="popup.js"></script>
-
-        <h4 id="greet">Login with Google</h4>
-        <input type="text" id="name">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>        
         
-        <!-- login Google API -->
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-        <script>
-            function onSignIn(googleUser) {
-                var profile = googleUser.getBasicProfile();
-                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                console.log('Name: ' + profile.getName());
-                console.log('Image URL: ' + profile.getImageUrl());
-                console.log('Email: ' + profile.getEmail());
-            }
-          </script>
     </body>
 </html>
