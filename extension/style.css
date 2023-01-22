@@ -1,7 +1,30 @@
-h2 {
-    color: olivedrab;
+*{margin: 0px;;; padding: 4px;; width: 100%;;}
+.hidden{display: none;}
+#bg{
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+#popup{
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
+    background-image: image-set(url(bg-image.png));
+    padding: 5px;
+    margin: 0px;
 }
 
-body {
-  background-color: #a80404;
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.column {
+    width: 33%;
+    font-size: xx-large;
 }
