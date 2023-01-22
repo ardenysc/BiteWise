@@ -1,5 +1,4 @@
-
-*{margin: 0px;;; padding: 8px;;}
+*{margin: 0px;;; padding: 4px;; width: 100%;;}
 .hidden{display: none;}
 #bg{
     position: fixed;
@@ -16,7 +15,16 @@
     transform: translate(-50%,-50%);
     background-color: rgb(255, 255, 255);
     background-image: image-set(url(bg-image.png));
-    padding: 20px;
-    width: auto;
-    height: auto;
+    padding: 5px;
+    margin: 0px;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.column {
+    width: 33%;
+    font-size: xx-large;
 }
