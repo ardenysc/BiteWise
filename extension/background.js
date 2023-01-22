@@ -38,7 +38,6 @@ function handleData(result){
     chrome.storage.sync.set({'bitewise': newBitwise});
     console.log("data stored:" + newBitwise );
 }
-
 function storeData(data){
     code, co2, nova, productName, nutriScore = null;
     code = data["code"];
@@ -87,17 +86,17 @@ async function handleContextClick(clickData) {
     if (clickData.menuItemId == "BiteWise" && clickData.selectionText){
         let barcode = clickData.selectionText;
         const url = "https://world.openfoodfacts.org/api/v0/product/"+barcode;
-
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                storeData(data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-
-        
+       
+        try{
+        const response = await fetch(url);
+        const data = await response.json();
+        const tabs = await chrome.tabs.query({active: true, currentWindow: true});
+        const res = await chrome.tabs.sendMessage((tabs[0].id), {
+            "hi": "hi"
+        });
+        } catch(error) {
+            console.log(error);
+        }
     }
 
     
