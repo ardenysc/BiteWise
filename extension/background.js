@@ -11,11 +11,17 @@ async function getCurrentTab() {
     return tab;
   }
 
-async function handleContextClick(info) {
-    let currentTab = getCurrentTab();
-    chrome.tabs.sendMessage(currentTab.id,{
-        data: "hi"
-    });
+async function handleContextClick(clickData) {
+    if (clickData.menuItemId == "BiteWise" && clickData.selectionText){
+        let barcode = clickData.selectionText;
+        chrome.tabs.create({url: "https://world.openfoodfacts.org/api/v0/product/"+barcode});
+    }
+    
+    
+    //let currentTab = getCurrentTab();
+    // chrome.tabs.sendMessage(currentTab.id,{
+    //     data: "hi"
+    // });
     //await chrome.runtime.sendMessage("asdasd")
     // var barcode = info.selectionText;
     // let currentTab = getCurrentTab();
