@@ -1,44 +1,23 @@
 
-*{margin: 5px;;; padding: 5px;;}
+*{margin: 0px;;; padding: 8px;;}
 .hidden{display: none;}
 #bg{
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     top: 0;
     left:0;
     background-color: rgba(0, 0, 0, 0.5);
+    
 }
 #popup{
     position: fixed;
     top: 50%;
-    left: 50%;
     transform: translate(-50%,-50%);
     background-color: rgb(255, 255, 255);
+    background-image: image-set(url(bg-image.png));
     padding: 20px;
-    text-align: center;
-    width: 20%;
+    width: auto;
     height: auto;
+    font-family: Exo;
 }
-#popup > h3{
-    border-bottom: 2px solid rgb(77, 77, 77);
-    padding: 10px 0;
-}
-#popup-text{
-    margin: 20px 0;
-}
-.button{
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    color: white;
-    background-color: rgb(77, 77, 77);
-}
-
-/* h2 {
-    color: olivedrab;
-}
-
-body {
-  background-color: #a80404;
-} */

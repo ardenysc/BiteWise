@@ -1,13 +1,13 @@
 // Set initial total to 0
 
-var total = 0;
+var total = 0; // dont need
 
 var input = document.getElementById("name");
 var greet = document.getElementById("greet");
 
 var totalSpent = document.getElementById("total");
 
-var limitField = document.getElementById("limit");
+var limitField = document.getElementById("limit"); // we don't need limit here
 var setLimitButton = document.getElementById("setLimit");
 
 var amountField = document.getElementById("amount");
