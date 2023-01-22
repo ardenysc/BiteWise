@@ -16,10 +16,10 @@ for (let i=0; i<items.length; i++) {
 
 var scores = document.getElementsByClassName("number-this");
 
-scores[0].innerHTML = 1 + "<span style=\"font-size: medium;\">/5</span>";
+scores[0].innerHTML = 1 + "<span style=\"font-size: medium;\">/4</span>";
 scores[1].innerText = 100 + "g";
 
-var scoreChange = [10, 10];
+var scoreChange = [-10, 10];
 var descriptions = document.getElementsByClassName("description");
 let novaScore = document.getElementById("change-nova");
 let carbonScore = document.getElementById("change-carbon");
