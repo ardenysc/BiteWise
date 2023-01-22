@@ -51,3 +51,37 @@
     font-size: x-large;
     text-align: center;
   }
+
+  .company-logo {
+    padding-inline: 30px;
+    padding-block: 30px;
+  }
+
+  .background-image{
+    background-image: url("background image default.png");
+    background-size: cover;
+  }
+
+/* Change background image for screens larger than 1200px */
+@media (min-width: 1200px) {
+  .background-image {
+    background-image: url("background image large.png");
+    background-size: cover;
+  }
+}
+
+.card{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card-img-top {
+  max-width: 10rem;
+  display: inline-block;
+  text-align: center;
+  object-fit: contain;
+}
+
+
+
+
