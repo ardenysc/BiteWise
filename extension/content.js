@@ -1,4 +1,4 @@
-chrome.runtime.onMessage.addListener(async function(message, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     console.log(message.data);
     // var popup = document.createElement('div');
     // popup.style.position = 'absolute';
@@ -13,7 +13,6 @@ chrome.runtime.onMessage.addListener(async function(message, sender, sendRespons
     // setTimeout(function() {
     //     popup.remove();
     // }, 3000);
-});
-
+})
 
 
