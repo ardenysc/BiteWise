@@ -1,18 +1,10 @@
 // Set initial total to 0
+var productName = document.getElementById("productName");
+var nutriscore_grade = document.getElementById("nutriscore_grade");
+var nova = document.getElementById("nova");
+var co2 = document.getElementById("co2");
 
-var total = 0; // dont need
-
-var input = document.getElementById("name");
-var greet = document.getElementById("greet");
-
-var totalSpent = document.getElementById("total");
-
-var limitField = document.getElementById("limit"); // we don't need limit here
-var setLimitButton = document.getElementById("setLimit");
-
-var amountField = document.getElementById("amount");
-var amountSubmit = document.getElementById("amountSubmit");
-var amountResetBtn = document.getElementById("amountReset");
+var addButton = document.getElementById("setLimit");
 
 const handleInput = (event) =>{
     console.log(event);
