@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="stat_style.css"> 
-    <link rel="stylesheet" type="text/css" href="stat_chart.css"> 
+    <link rel="stylesheet" type="text/css" href="stats_style.css"> 
+    <link rel="stylesheet" type="text/css" href="stats_chart.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
     <title>Document</title>
 </head>
-<body class="background-image">
+
+<body style="background-color:#efeff4; font-family:Exo;">
     <!-- <div> -->
         <div class="company-logo">
             <img id="company-logo" src="bitewise logo.png" alt="company-Logo">
         </div>
         <div class="column left">
             <div class="card" style="width: 0px;">
-                <div class="card border-dark mb-3" style="width: 10.5rem;">
+                <div class="card border-dark mb-3" style="width: 10rem;">
                 <img src="user profile picture.png" class="card-img-top" alt="user profile picture" align="center">
                 <div class="card-body">
                   <h5 class="card-greeting">Hi, <p class="card-username">user08hbx0!</p> </h5>
@@ -28,7 +30,8 @@
         </div>       
         <div class="column right">
             <div class="dropdown" style="font-size:x-large;">
-                your <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                your 
+                <button class="btn btn-light dropdown-toggle border border-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   week
                 </button> in a nutshell
                 <ul class="dropdown-menu">
@@ -41,8 +44,8 @@
                 <div class="title">Nutri-Score</div>
                 <div class="flex-wrapper">
                     <div class="single-chart">
-                        <div class="chart-header">A</div>
-                        <div class="pie animate" style="--p:20;--c:#00803d"> 20%</div>
+                        <div class="chart-header" style="color:#00803d;">A</div>
+                        <div class="pie animate" style="--p:20;--c:#00803d;">20%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -67,8 +70,8 @@
                         </ul>
                     </div>
                     <div class="single-chart">
-                        <div class="chart-header">B</div>
-                        <div class="pie animate" style="--p:20;--c:#87bd25"> 90%</div>
+                        <div class="chart-header" style="color:#87bd25;">B</div>
+                        <div class="pie animate" style="--p:20;--c:#87bd25;">90%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -93,8 +96,8 @@
                         </ul>
                     </div>
                     <div class="single-chart">
-                        <div class="chart-header">C</div>
-                        <div class="pie animate" style="--p:20;--c:#ffcc02"> 30%</div>
+                        <div class="chart-header" style="color:#ffcc02;">C</div>
+                        <div class="pie animate" style="--p:20;--c:#ffcc02;">30%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -119,8 +122,8 @@
                         </ul>
                     </div>
                     <div class="single-chart">
-                        <div class="chart-header">D</div>
-                        <div class="pie animate" style="--p:20;--c:#ef7d00"> 10%</div>
+                        <div class="chart-header" style="color:#ef7d00;">D</div>
+                        <div class="pie animate" style="--p:20;--c:#ef7d00;">10%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -145,8 +148,8 @@
                         </ul>
                     </div>
                     <div class="single-chart">
-                        <div class="chart-header">E</div>
-                        <div class="pie animate" style="--p:20;--c:#e73212"> 90%</div>
+                        <div class="chart-header" style="color:#e73212;">E</div>
+                        <div class="pie animate" style="--p:20;--c:#e73212;">90%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -177,42 +180,50 @@
                 <div class="column" style="width:50%;">
                     <div class="title">Nova-Score</div>
                     <div class="flex-wrapper">
-                        <div class="column" style="width:50%;">
-                            <div class="number-box">
-                                4.5
-                            </div>
-                            <div class="number-compare">
-                                ↑ 10%
-                            </div>
+                        <div class="column" style="width:40%;">
+                            <ul class="no-bullets">
+                                <li class="number-this">4.5<span style="font-size: medium;">/5</span></li>
+                                <li class="number-compare" id="change-nova">-</li>
+                            </ul>  
                         </div>
-                        <div class="column" style="width:50%;">
+                        <div class="column" style="width:60%;">
                             <div class="description">
-                                description
+                                <div><img src="https://img.icons8.com/ios/100/FA5252/sad.png"/></div>
+                                <span style="color:#e73212";>more </span>
+                                processed food in your diet
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="column" style="width:50%;">
-                    <div class="title">Carbon</div>
+                    <div class="title">Carbon Footprint</div>
                     <div class="flex-wrapper">
-                        <div class="column" style="width:50%;">
-                            <div class="number-box">
-                                4.5
-                            </div>
-                            <div class="number-compare">
-                                ↓ 10%
-                            </div>
+                        <div class="column" style="width:40%;">
+                            <ul class="no-bullets">
+                                <li class="number-this">10kg</li>
+                                <li class="number-compare" id="change-carbon">-</li>
+                            </ul>  
                         </div>
-                        <div class="column" style="width:50%;">
+                        <div class="column" style="width:60%;">
                             <div class="description">
-                                description
+                                <div><img src="https://img.icons8.com/ios/100/40C057/happy--v1.png"></div>
+                                <span style="color:#00c348";>less </span>
+                                carbon footprint emitted
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <footer class="text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="color:#efeff4";>
+              © 2023 biteWise
+            </div>
+            <!-- Copyright -->
+        </footer>
     <!-- </div> -->
+    <script src="stats.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,99 @@
+.body {
+  display:block;
+}
+
+.row {
+  padding-right: 0%;
+}
+
+.column {
+    float: left;
+    padding-left: 0px;
+    padding-right: 0%;
+  }
+  
+.left {
+    width: 15%;
+  }
+  
+.right {
+    width: 82%;
+  }
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #fff;
+    border-radius: 25px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: 800;
+  padding: 1%;
+}
+
+.single-chart {
+    width: 20%;
+    justify-content: space-around ;
+    padding: 1%;
+    font-family: Exo;
+  }
+  
+  .chart-header {
+    font-size: x-large;
+    padding-left: 10px;
+  }
+
+  .chart-elements {
+    font-size: medium;
+  }
+
+  .number-box {
+    font-size: xx-large;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+  }
+
+  .number-this {
+    padding-top: 60px;
+    text-align: center;
+    font-size: xx-large;
+  }
+
+  .number-compare {
+    font-size: large;
+    text-align: center;
+    color: rgb(157, 155, 155);
+  }
+
+  .number-compare-good {
+    font-size: large;
+    text-align: center;
+    color: #00c348;
+  }
+
+  .number-compare-bad {
+    font-size: large;
+    text-align: center;
+    color: #e73212;
+  }
+
+  .description {
+    font-size: x-large;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    padding-top: 20px;
+    padding-right: 10px;
+  }
+
+  .no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
