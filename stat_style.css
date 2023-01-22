@@ -1,6 +1,15 @@
+.body {
+  margin-bottom: 50px;
+}
+
+.row {
+  padding-right: 0%;
+}
+
 .column {
     float: left;
-    /* background:rgba(14, 94, 14, 0.06); */
+    padding-left: 0px;
+    padding-right: 0%;
   }
   
 .left {
@@ -8,7 +17,7 @@
   }
   
 .right {
-    width: 85%;
+    width: 82%;
   }
 
 .flex-wrapper {
@@ -16,16 +25,21 @@
     flex-flow: row nowrap;
     background-color: #fff;
     border-radius: 25px;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .title {
   font-size: xx-large;
+  font-weight: 800;
+  padding: 1%;
 }
 
 .single-chart {
     width: 20%;
     justify-content: space-around ;
     padding: 1%;
+    font-family: Exo;
   }
   
   .chart-header {
@@ -39,15 +53,44 @@
   .number-box {
     font-size: xx-large;
     text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+  }
+
+  .number-this {
+    padding-top: 60px;
+    text-align: center;
+    font-size: xx-large;
   }
 
   .number-compare {
     font-size: large;
-    text-align: center;
     color: rgb(157, 155, 155);
+  }
+
+  .number-compare-good {
+    font-size: large;
+    text-align: center;
+    color: #7cb118;
+  }
+
+  .number-compare-bad {
+    font-size: large;
+    text-align: center;
+    color: #e73212;
   }
 
   .description {
     font-size: x-large;
     text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    padding-top: 20px;
+    padding-right: 10px;
+  }
+
+  .no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }

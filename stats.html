@@ -7,16 +7,21 @@
     <link rel="stylesheet" type="text/css" href="stat_style.css"> 
     <link rel="stylesheet" type="text/css" href="stat_chart.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
     <title>Document</title>
 </head>
-<body style="background-color: #efeff4;">
+<body style="background-color:#efeff4; font-family:Exo;">
     <!-- <div> -->
+        <div class="logo">
+            <h1>logo</h1>
+        </div>
         <div class="column left">
             <h1>user info</h1>
         </div>
         <div class="column right">
             <div class="dropdown" style="font-size:x-large;">
-                your <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                your 
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   week
                 </button> in a nutshell
                 <ul class="dropdown-menu">
@@ -30,7 +35,7 @@
                 <div class="flex-wrapper">
                     <div class="single-chart">
                         <div class="chart-header">A</div>
-                        <div class="pie animate" style="--p:20;--c:#00803d"> 20%</div>
+                        <div class="pie animate" style="--p:20;--c:#00803d;"> 20%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -56,7 +61,7 @@
                     </div>
                     <div class="single-chart">
                         <div class="chart-header">B</div>
-                        <div class="pie animate" style="--p:20;--c:#87bd25"> 90%</div>
+                        <div class="pie animate" style="--p:20;--c:#87bd25;"> 90%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -82,7 +87,7 @@
                     </div>
                     <div class="single-chart">
                         <div class="chart-header">C</div>
-                        <div class="pie animate" style="--p:20;--c:#ffcc02"> 30%</div>
+                        <div class="pie animate" style="--p:20;--c:#ffcc02;"> 30%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -108,7 +113,7 @@
                     </div>
                     <div class="single-chart">
                         <div class="chart-header">D</div>
-                        <div class="pie animate" style="--p:20;--c:#ef7d00"> 10%</div>
+                        <div class="pie animate" style="--p:20;--c:#ef7d00;"> 10%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -134,7 +139,7 @@
                     </div>
                     <div class="single-chart">
                         <div class="chart-header">E</div>
-                        <div class="pie animate" style="--p:20;--c:#e73212"> 90%</div>
+                        <div class="pie animate" style="--p:20;--c:#e73212;"> 90%</div>
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               Apple
@@ -165,35 +170,49 @@
                 <div class="column" style="width:50%;">
                     <div class="title">Nova-Score</div>
                     <div class="flex-wrapper">
-                        <div class="column" style="width:50%;">
+                        <div class="column" style="width:40%;">
+                            <ul class="no-bullets">
+                                <li class="number-this">4.5</li>
+                                <li class="number-compare-bad">↑ 10%</li>
+                            </ul>  
+                        </div>
+                        <div class="column" style="width:60%;">
+                            <div class="description">
+                                <div><img src="https://img.icons8.com/ios/100/FA5252/sad.png"/></div>
+                                <span style="color:#e73212";>more </span>
+                                processed food in your diet
+                            </div>
+                        </div>
+                        <!-- <div class="column" style="width:40%;">
                             <div class="number-box">
                                 4.5
                             </div>
-                            <div class="number-compare">
+                            <div class="number-compare-bad">
                                 ↑ 10%
                             </div>
                         </div>
-                        <div class="column" style="width:50%;">
+                        <div class="column" style="width:60%;">
                             <div class="description">
-                                description
+                                <span style="color:#e73212";>more </span>
+                                processed food in your diet
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="column" style="width:50%;">
-                    <div class="title">Carbon</div>
+                    <div class="title">Carbon Footprint</div>
                     <div class="flex-wrapper">
-                        <div class="column" style="width:50%;">
-                            <div class="number-box">
-                                4.5
-                            </div>
-                            <div class="number-compare">
-                                ↓ 10%
-                            </div>
+                        <div class="column" style="width:40%;">
+                            <ul class="no-bullets">
+                                <li class="number-this">10kg</li>
+                                <li class="number-compare-good">↓ 10%</li>
+                            </ul>  
                         </div>
-                        <div class="column" style="width:50%;">
+                        <div class="column" style="width:60%;">
                             <div class="description">
-                                description
+                                <div><img src="https://img.icons8.com/ios/100/40C057/happy--v1.png"></div>
+                                <span style="color:#7cb118";>less </span>
+                                carbon footprint emitted
                             </div>
                         </div>
                     </div>
