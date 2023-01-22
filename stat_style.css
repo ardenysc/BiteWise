@@ -53,8 +53,13 @@
   }
 
   .company-logo {
+<<<<<<< HEAD
     margin-left: 30px;
     margin-right: 30px;
+=======
+    padding-left: 30px;
+    padding-right: 30px;
+>>>>>>> b52490f34216ba93764c966df752a521a8821c18
   }
 
   .background-image{
@@ -71,8 +76,13 @@
 }
 
 .card {
+<<<<<<< HEAD
   margin-left: 10%;
   margin-right: 10%;
+=======
+  padding-left: 30px;
+  padding-right: 30px;
+>>>>>>> b52490f34216ba93764c966df752a521a8821c18
 }
 
 .card-img-top {
