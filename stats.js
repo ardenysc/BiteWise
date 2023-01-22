@@ -11,7 +11,7 @@ var items = document.getElementsByClassName("list-group-item");
 for (let i=0; i<items.length; i++) {
     // console.log(items[i]);
     // items[i].innerText = String(i);
-    items[i].innerHTML = String(i) + " <span className=\"badge\">" + i + "</span>"
+    items[i].innerHTML = String(i) + " <span class=\"badge bg-secondary\">" + i + "</span>"
 }
 
 var scores = document.getElementsByClassName("number-this");
