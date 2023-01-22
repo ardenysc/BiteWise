@@ -12,6 +12,7 @@ var setLimitButton = document.getElementById("setLimit");
 var amountField = document.getElementById("amount");
 var amountSubmit = document.getElementById("amountSubmit");
 var amountResetBtn = document.getElementById("amountReset");
+var dataTest = document.getElementById("data");
 
 
 
@@ -68,6 +69,9 @@ const getStorageValues = (result) => {
     if(result.limit){
         limitField.innerHTML = result.limit;
     }
+    if(result.code){
+        dataTest.innerHTML = result.code;
+    }
 }
 const resetAmount = (e) => {
     total = 0
@@ -75,7 +79,7 @@ const resetAmount = (e) => {
     chrome.storage.sync.set({'total': total});
 }
 
-chrome.storage.sync.get(['total', 'limit'], getStorageValues);
+chrome.storage.sync.get(['total', 'limit',"code"], getStorageValues);
 input.addEventListener("input", handleInput);
 amountSubmit.addEventListener("click", handleSubmit);
 setLimitButton.addEventListener("click", setLimit);
