@@ -1,5 +1,5 @@
 .body {
-  margin-bottom: 50px;
+  display:block;
 }
 
 .row {
@@ -27,6 +27,7 @@
     border-radius: 25px;
     padding-top: 1%;
     padding-bottom: 1%;
+    margin-bottom: 1%;
 }
 
 .title {
@@ -44,6 +45,7 @@
   
   .chart-header {
     font-size: x-large;
+    padding-left: 10px;
   }
 
   .chart-elements {
@@ -65,13 +67,14 @@
 
   .number-compare {
     font-size: large;
+    text-align: center;
     color: rgb(157, 155, 155);
   }
 
   .number-compare-good {
     font-size: large;
     text-align: center;
-    color: #7cb118;
+    color: #00c348;
   }
 
   .number-compare-bad {
