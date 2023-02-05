@@ -1,5 +1,14 @@
 console.log("contents.js");
 
+document.addEventListener("contextmenu", function(event) {
+    // Get the x and y position of the mouse
+    var x = event.clientX;
+    var y = event.clientY;
+  
+    // Log the x and y position of the mouse
+    console.log("Mouse clicked at: (" + x + ", " + y + ")");
+  });
+
 chrome.runtime.onMessage.addListener(
     function(message, sender, sendResponse) {
         console.log("here")
