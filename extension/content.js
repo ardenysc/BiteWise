@@ -1,12 +1,15 @@
 console.log("contents.js");
 
+let xCoord;
+let yCoord;
+
 document.addEventListener("contextmenu", function(event) {
     // Get the x and y position of the mouse
-    var x = event.clientX;
-    var y = event.clientY;
+    xCoord = event.clientX;
+    yCoord = event.clientY;
   
     // Log the x and y position of the mouse
-    console.log("Mouse clicked at: (" + x + ", " + y + ")");
+    console.log("Mouse clicked at: (" + xCoord + ", " + yCoord + ")");
   });
 
 chrome.runtime.onMessage.addListener(
@@ -15,8 +18,8 @@ chrome.runtime.onMessage.addListener(
 
         var popup = document.createElement('div');
         popup.style.position = 'fixed';
-        popup.style.left =  + '50%';
-        popup.style.top = '50%';
+        popup.style.left =  xCoord + 'px';
+        popup.style.top =  yCoord + 'px';
         popup.style.padding = '10px';
         popup.style.zIndex = '9999';
         popup.style.background = 'white';
