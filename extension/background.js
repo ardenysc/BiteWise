@@ -76,7 +76,89 @@ function storeData(data){
     chrome.storage.sync.get(["bitewise"], handleData);
 }
 
-async function handleContextClick(clickData) {
+const limitLength = (str) => {
+    let maxLength = 15;
+
+    if(str.length > maxLength){
+        str = str.slice(0,maxLength-1) + "..."
+    }
+
+    return str
+}
+
+const getNova = (data) => {
+    let nova = "Not Found"
+
+    if (data["product"]["nova_group"]) {
+        nova = data["product"]["nova_group"];
+    } else {
+        console.log("nova does not exist");
+    }
+    return nova;
+}
+
+const getProdName = (data) => {
+    let productName = "Not Found"
+    
+    if (data["product"]["product_name"]){
+        productName = limitLength(data["product"]["product_name"]);
+    } else {
+        console.log("product name does not exist");
+    }
+    return productName;
+}
+
+const getCo2 = (data) => {
+    let co2 = -1
+
+    if (data["product"] &&
+    data["product"]["ecoscore_data"] && 
+    data["product"]["ecoscore_data"]["agribalyse"] &&
+    data["product"]["ecoscore_data"]["agribalyse"]["co2_total"])
+    {
+    co2 = data["product"]["ecoscore_data"]["agribalyse"]["co2_total"];
+    co2 = co2.toFixed(2);   
+    } else {
+        console.log("co2 not found");
+    }
+
+    return co2;
+}
+
+const getGrade = (data) => {
+    let grade = "Not Found"
+
+    if (data["product"]["nutriscore_grade"]){
+        nutriScore = data["product"]["nutriscore_grade"];
+    } else {
+        console.log("grade does not exist");
+    }
+    return grade;
+}
+
+const getBrand = (data) => {
+    let brand = "Not Found"
+
+    if (data["product"]["brands"]){
+        brand = data["product"]["brands"];
+    } else {
+        console.log("brand does not exist");
+    }
+
+    return brand;
+}
+const getPopupData = (data) => {
+    return ({
+        "name": getProdName(data),
+        "brand": getBrand(data),
+        "grade": getGrade(data),
+        "nova": getNova(data),
+        "co2": getCo2(data)
+    })
+
+}
+
+const handleContextClick = async (clickData) => {
     if (clickData.menuItemId == "BiteWise" && clickData.selectionText){
         let barcode = clickData.selectionText;
         const url = "https://world.openfoodfacts.org/api/v0/product/"+barcode;
@@ -85,15 +167,15 @@ async function handleContextClick(clickData) {
         const response = await fetch(url);
         const data = await response.json();
 
-        console.log(data);
+        let popupData = getPopupData(data);
+
         const tabs = await chrome.tabs.query({active: true, currentWindow: true});
-        const res = await chrome.tabs.sendMessage((tabs[0].id), {
-            "hi": "hi"
-        });
+        const res = await chrome.tabs.sendMessage((tabs[0].id), popupData);
         } catch(error) {
             console.log(error);
         }
     }
+
 }
 
 chrome.contextMenus.create(contextMenuItem);

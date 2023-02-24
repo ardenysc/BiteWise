@@ -3,14 +3,13 @@ console.log("contents.js");
 let xCoord;
 let yCoord;
 
-document.addEventListener("contextmenu", function(event) {
-    // Get the x and y position of the mouse
+
+const updateCoords = (event) => {
     xCoord = event.clientX;
     yCoord = event.clientY;
-  
-    // Log the x and y position of the mouse
-    console.log("Mouse clicked at: (" + xCoord + ", " + yCoord + ")");
-  });
+} 
+
+document.addEventListener("contextmenu", updateCoords);
 
 chrome.runtime.onMessage.addListener(
     function(message, sender, sendResponse) {
@@ -25,7 +24,11 @@ chrome.runtime.onMessage.addListener(
         popup.style.background = 'white';
         popup.className = "popup";
         popup.style.border = '1px solid gray';
-        popup.innerHTML = '<b>Barcode:</b> <br><b>Product Name:</b> <br><b>Brand:</b> <br><b>Price:</b> ';
+        popup.innerHTML = `<b>Product Name: ${message['name']}</b><br>\
+                           <b>Brand: ${message['brand']}</b><br>\
+                           <b>Grade: ${message['grade']}</b><br>\
+                           <b>Nova Score: ${message['nova']}</b><br>\
+                           <b>Co2 Emission: ${message['co2']}</b>`;
         document.body.appendChild(popup);
 
         console.log(message);
