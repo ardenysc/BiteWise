@@ -1,0 +1,34 @@
+1. node js project 만들기
+(npm 깔고)project directory에서 npm init하면 Package.json 생성되며 프로젝트가 생성됨. 
+
+2. Package.json script로 nodejs 실행
+- npm run 'A' 하면 Package.json - script에 A에 해당하는 script가 실행
+- npm run의 root directory는 package.json이다
+
+3. express 설치
+- npm i express
+- node_modules 에는 npm으로 설치한 모든 패키지가 저장된다
+- express를 설치하는데 의존하고 있는 패키지가 있기 때문에 npm i express를 하면 그것들도 함께 설치된다(node_modules, package-lock.json)
+- package-lock : 설치되는 dependency version 을 fix하는 역할. *(코드가 잘 돌아 갔을 그 떄의 version을 저장하는 개념)
+
+4. Babel
+- Babeld이란? 최신 JS를 browser-compatible JS로 바꿔줌. -> 편하게 쓸수있다.
+- Install babel: npm install --save-dev @babel/core @babel/node
+- Make Babel compilation automated using bable node: 
+- Then add "babel-node" in the script 
+
+5. nodemon
+- watch any changes in code and rerun nodejs when something changes
+- npm i nodemon --save-dev
+- add nodemon --exec  in the beginning of script
+
+6. express get started
+- listen port : app.listen(PORT, handleListen);
+- Get/respond: app.get(dir, (req, res) => {res.send("hello world"})
+
+7. middleware
+- get method callback에 세번째 arg를 추가하여 다음 오는 middleware를 call할수 있다
+- ex. app.get("/", (req, res,next) => { next()});
+- a middleware never ends the requests but continues requests
+- app.use allows you to use a global middleware( it should come before app.get())
+- Morgan: NodeJS를 위한 HTTP request logger middleware

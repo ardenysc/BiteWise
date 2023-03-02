@@ -1,0 +1,29 @@
+{
+  "name": "bitewise",
+  "version": "1.0.0",
+  "description": "nwHack Hackthon Team",
+  "main": "./src/init.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node ./src/init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christopher-Eunho/BiteWise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Christopher-Eunho/BiteWise/issues"
+  },
+  "homepage": "https://github.com/Christopher-Eunho/BiteWise#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "nodemon": "^2.0.20"
+  }
+}
