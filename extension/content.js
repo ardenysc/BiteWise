@@ -9,7 +9,7 @@ const updateCoords = (event) => {
     yCoord = event.clientY;
 } 
 
-const handleOnMessage = (msg, sender, sendResponse) => {
+const handleOnMessage = async (msg, sender, sendResponse) => {
     console.log("here")
     var popup = document.createElement('div');
     popup.style.position = 'fixed';
