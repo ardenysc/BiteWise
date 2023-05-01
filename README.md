@@ -1,2 +1,3 @@
 # BiteWise
-<img width="1181" alt="bitewise" src="https://user-images.githubusercontent.com/99078453/235412061-5c102e0d-0ec2-4602-b800-b4363bd82367.png">
+
+![bitewise](https://user-images.githubusercontent.com/99078453/235424679-946f478f-c1f6-418f-819b-84c139fad1ae.png)
